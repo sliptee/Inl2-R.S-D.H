@@ -89,7 +89,7 @@ Urvalssortering (eng: selection sort) hittar först det minsta talet, och sätte
 Länk till projektet:  \\
  \url{https://scratch.mit.edu/projects/178469197/#editor }
 \subsection{Uppgift 5: Fibonaccis talföljd}
-Då fibonaccitalen bygger på varandra kan vi använda att vi vet Fib(n-1) och Fib(n-2) vid beräkning av Fib(n). På grund av att vi utgår ifrån talen 0,1 kommer detta alltid att vara tillräckligt. Vi kan således lägga ihop dessa och lägga in dem på rätt plats i listan.
+Då fibonaccitalen bygger på varandra kan vi, i enighet med dynamisk programmering, använda att vi vet Fib(n-1) och Fib(n-2) vid beräkning av Fib(n). På grund av att vi utgår ifrån talen 0,1 kommer detta alltid att vara tillräckligt. Vi kan således lägga ihop dessa och lägga in dem på rätt plats i listan. Man skulle kunna beräkna varje tal för sig självt, utan att ta hjälp av de tidigare beräkningarna, men det skulle vara en mycket ineffektiv lösning. Istället, genom användandet av dynamisk programmering har vi en betydligt bättre lösning, som bara kräver en addition för att få ut nästa tal.
 \begin{figure}[H]
 	\caption{Fibonaccitalen}
 	\centering
@@ -99,6 +99,30 @@ Då fibonaccitalen bygger på varandra kan vi använda att vi vet Fib(n-1) och F
 Länk till projektet:  \\
  \url{https://scratch.mit.edu/projects/178477056/#editor }
 \section{Lego Mindstorms}
+För uppgiften i lego mindstorms fanns flera delproblem som vi löste separat för att sedan foga samman dem till en användbar lösning till helhetsproblemet. \\
+1. Följ linjen \\
+2. Detektera kollision med hjulstapeln. \\
+3. Plocka upp hjulen och vänd. \\
+4. Följ linjen tillbaka och släpp hjulen \\
+\subsection{Följa linjen}
+Det största problemet av dessa var att få roboten att följa linjen. Först landade vi i en ganska enkel lösning, som svänger åt ena hållet om roboten är på linjen, annars åt det andra hållet (se: figur~\ref{fig7:switchfollow}). Detta fungerade emellertid, men resulterade i att roboten svängde konstant. Efter att övriga deluppgifter var lösta funderade vi över en möjlig lösning som istället kunde köra rakt när den var på linjen, men fortfarande följde den. Vi upptäckte att vi fick ett värde på ca. 50 när den stog på kanten, och att vi kunde använda det för att få den att köra rakt, på kanten, istället för på mitten av tejpen. 
+\begin{figure}[H]
+	\caption{Switch-följaren}
+	\centering
+	\includegraphics[scale=0.8]{switchfollow}
+	\label{fig7:switchfollow}
+\end{figure} 
+\begin{figure}[H]
+	\caption{Justerande}
+	\centering
+	\includegraphics[scale=0.8]{legmindfollow}
+	\label{fig8:linefollow}
+\end{figure}
+Hela lego mindstorms projektet finns som bilaga. 
+\subsubsection{Kalibrering}
+För att lösningen skulle fungera väl krävdes någon form av kalibrering, så att vi får ett användbart värde när den står på kanten. Därför 
+\subsection{Detektion av hjulstapeln}
+
 \section{Tidrapport}
 9/10 -2017 1h /person. 
 10/10 - 2017 1h / person. 
